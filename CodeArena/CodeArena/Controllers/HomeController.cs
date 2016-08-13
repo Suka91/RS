@@ -15,7 +15,8 @@ namespace CodeArena.Controllers
             return View();
         }
 
-        public ActionResult About()
+        [Authorize]
+        public ActionResult PlayGame()
         {
             ViewBag.Message = "Your app description page.";
 
