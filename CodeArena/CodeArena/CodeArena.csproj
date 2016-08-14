@@ -182,12 +182,19 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\BattleController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\RecordController.cs" />
     <Compile Include="Filters\InitializeSimpleMembershipAttribute.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountModels.cs" />
+    <Compile Include="Models\BattleDBContext.cs" />
+    <Compile Include="Models\BattleDbInitializer.cs" />
+    <Compile Include="Models\Record.cs" />
+    <Compile Include="Models\TaskDescription.cs" />
+    <Compile Include="Models\Task.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -301,6 +308,17 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Web.config" />
     <Content Include="Views\Home\PlayGame.cshtml" />
+    <Content Include="Views\Battle\Index.cshtml" />
+    <Content Include="Views\Battle\Details.cshtml" />
+    <Content Include="Views\Battle\Create.cshtml" />
+    <Content Include="Views\Battle\Edit.cshtml" />
+    <Content Include="Views\Battle\Delete.cshtml" />
+    <Content Include="Views\Record\Index.cshtml" />
+    <Content Include="Views\Record\Details.cshtml" />
+    <Content Include="Views\Record\Create.cshtml" />
+    <Content Include="Views\Record\Edit.cshtml" />
+    <Content Include="Views\Record\Delete.cshtml" />
+    <Content Include="Views\Battle\TaskDescription.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

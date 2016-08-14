@@ -25,6 +25,7 @@ namespace CodeArena.Models
         [DatabaseGeneratedAttribute(DatabaseGeneratedOption.Identity)]
         public int UserId { get; set; }
         public string UserName { get; set; }
+        public virtual List<Record> Records { get; set; }
     }
 
     public class RegisterExternalLoginModel

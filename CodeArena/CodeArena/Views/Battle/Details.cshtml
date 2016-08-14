@@ -1,0 +1,43 @@
+﻿@model CodeArena.Models.Task
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Task</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.UnsolvedTaskPath)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.UnsolvedTaskPath)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.SolvedTaskPath)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.SolvedTaskPath)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.WraperTaskPath)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.WraperTaskPath)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.IOTestTaskPath)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.IOTestTaskPath)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.TaskId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
