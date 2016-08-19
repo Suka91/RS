@@ -1,0 +1,3 @@
+def tuples(input_list):
+    t = ...
+    return t

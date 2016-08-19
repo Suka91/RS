@@ -22,27 +22,102 @@ namespace CodeArena.Models
             };
             var descriptions = new List<TaskDescription>
             {   
+                
+                /*Binary_Search */
                 new TaskDescription 
                 {
-                    //TaskDescriptionId = 1,
-                    TaskTitle = "Prvi zadatak",
+                    TaskTitle = "Binary_Search",
                     Level = 1,
                     DescriptionText = "Opis prvog zadatka."
-                }   
+                },
+                new TaskDescription 
+                {
+                    TaskTitle = "Binary_Search",
+                    Level = 2,
+                    DescriptionText = "Opis prvog zadatka."
+                }  ,
+                new TaskDescription 
+                {
+                    TaskTitle = "Binary_Search",
+                    Level = 3,
+                    DescriptionText = "Opis prvog zadatka."
+                }  ,
+
+                /* Count_Number_Of_Vowel */
+                new TaskDescription 
+                {
+                    TaskTitle = "Count_Number_Of_Vowel",
+                    Level = 1,
+                    DescriptionText = "Opis prvog zadatka."
+                },
+                new TaskDescription 
+                {
+                    TaskTitle = "Count_Number_Of_Vowel",
+                    Level = 2,
+                    DescriptionText = "Opis prvog zadatka."
+                },
+                new TaskDescription 
+                {
+                    TaskTitle = "Count_Number_Of_Vowel",
+                    Level = 3,
+                    DescriptionText = "Opis prvog zadatka."
+                }
             };
 
             
 
            new List<Task>
             {
+                /*Binary_Search */
                 new Task
                 {
-                    TaskId = 1,
-                    UnsolvedTaskPath = "putanja do zadatka.",
-                    SolvedTaskPath = "putanja do user zadatka.",
-                    WraperTaskPath = "putanja do wrappera.",
-                    IOTestTaskPath = "putanja do testova.",
-                    Description = descriptions.Single(d => d.TaskTitle == "Prvi zadatak")
+                    UnsolvedTaskPath = "~/Resources/Binary_Search/version1/Binary_Search.py",
+                    SolvedTaskPath = "~/Resources/Binary_Search/version1/Binary_Search_Solved.py",
+                    WraperTaskPath = "~/Resources/Binary_Search/version1/Binary_Search_Wrapper.py",
+                    IOTestTaskPath = "~/Resources/Binary_Search/version1/Binary_Search_IO.py",
+                    Description = descriptions.Single(d => d.TaskTitle == "Binary Search" &&  d.Level == 1)
+                },
+                new Task
+                {
+                    UnsolvedTaskPath = "~/Resources/Binary_Search/version2/Binary_Search.py",
+                    SolvedTaskPath = "~/Resources/Binary_Search/version2/Binary_Search_Solved.py",
+                    WraperTaskPath = "~/Resources/Binary_Search/version2/Binary_Search_Wrapper.py",
+                    IOTestTaskPath = "~/Resources/Binary_Search/version2/Binary_Search_IO.py",
+                    Description = descriptions.Single(d => d.TaskTitle == "Binary Search" &&  d.Level == 3)
+                },
+                new Task
+                {
+                    UnsolvedTaskPath = "~/Resources/Binary_Search/version3/Binary_Search.py",
+                    SolvedTaskPath = "~/Resources/Binary_Search/version3/Binary_Search_Solved.py",
+                    WraperTaskPath = "~/Resources/Binary_Search/version3/Binary_Search_Wrapper.py",
+                    IOTestTaskPath = "~/Resources/Binary_Search/version3/Binary_Search_IO.py",
+                    Description = descriptions.Single(d => d.TaskTitle == "Binary Search" &&  d.Level == 2)
+                },
+
+                /* Count_Number_Of_Vowel */
+                new Task
+                {
+                    UnsolvedTaskPath = "~/Resources/Count_Number_Of_Vowel/version1/Count_Number_Of_Vowel.py",
+                    SolvedTaskPath = "~/Resources/Count_Number_Of_Vowel/version1/Count_Number_Of_Vowel_Solved.py",
+                    WraperTaskPath = "~/Resources/Count_Number_Of_Vowel/version1/Count_Number_Of_Vowel_Wrapper.py",
+                    IOTestTaskPath = "~/Resources/Count_Number_Of_Vowel/version1/Count_Number_Of_Vowel_IO.py",
+                    Description = descriptions.Single(d => d.TaskTitle == "Count Number Of Vowel" &&  d.Level == 1)
+                },
+                new Task
+                {
+                    UnsolvedTaskPath = "~/Resources/Count_Number_Of_Vowel/version1/Count_Number_Of_Vowel.py",
+                    SolvedTaskPath = "~/Resources/Count_Number_Of_Vowel/version1/Count_Number_Of_Vowel_Solved.py",
+                    WraperTaskPath = "~/Resources/Count_Number_Of_Vowel/version1/Count_Number_Of_Vowel_Wrapper.py",
+                    IOTestTaskPath = "~/Resources/Count_Number_Of_Vowel/version1/Count_Number_Of_Vowel_IO.py",
+                    Description = descriptions.Single(d => d.TaskTitle == "Count Number Of Vowel" &&  d.Level == 2)
+                },
+                new Task
+                {
+                    UnsolvedTaskPath = "~/Resources/Count_Number_Of_Vowel/version1/Count_Number_Of_Vowel.py",
+                    SolvedTaskPath = "~/Resources/Count_Number_Of_Vowel/version1/Count_Number_Of_Vowel_Solved.py",
+                    WraperTaskPath = "~/Resources/Count_Number_Of_Vowel/version1/Count_Number_Of_Vowel_Wrapper.py",
+                    IOTestTaskPath = "~/Resources/Count_Number_Of_Vowel/version1/Count_Number_Of_Vowel_IO.py",
+                    Description = descriptions.Single(d => d.TaskTitle == "Count Number Of Vowel" &&  d.Level == 3)
                 }
             }.ForEach(a => context.Tasks.Add(a));
             records.ForEach(a => context.Records.Add(a));
