@@ -1,3 +1,0 @@
-def remove_duplicates(words):
-    words = ...
-    return " ".join(sorted(list(set(words))))

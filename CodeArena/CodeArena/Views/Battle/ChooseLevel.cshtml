@@ -1,0 +1,12 @@
+﻿@model CodeArena.Models.TaskDescription
+<h2>Choose Level</h2>
+<div id="Menu">
+@using (Html.BeginForm("TaskDescription", "Battle"))
+{
+    for (int i = 1; i <= @ViewBag.maxLevel; i++)
+    {
+        @Html.RadioButton("Level", i)
+    }
+    <input type="submit" value="Begin Battle" />
+}
+</div>

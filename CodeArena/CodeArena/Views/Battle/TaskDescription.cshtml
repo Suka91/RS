@@ -1,4 +1,4 @@
-﻿@model IEnumerable<CodeArena.Models.TaskDescription>
+﻿@model CodeArena.Models.TaskDescription
 
 @{
     ViewBag.Title = "TaskDescription";
@@ -20,19 +20,20 @@
         <th></th>
     </tr>
 
-    @foreach (var item in Model)
-    {
+    
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.TaskTitle)
+                @Html.DisplayFor(modelItem => modelItem.TaskTitle)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Level)
+                @Html.DisplayFor(modelItem => modelItem.Level)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.DescriptionText)
+                @Html.DisplayFor(modelItem => modelItem.DescriptionText)
             </td>
         </tr>
-    }
+        
 
 </table>
+
+@Html.ActionLink("Start Coding","Code","Battle")
