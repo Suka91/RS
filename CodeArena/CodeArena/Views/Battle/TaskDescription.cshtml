@@ -1,4 +1,4 @@
-﻿@model CodeArena.Models.TaskDescription
+﻿@model CodeArena.Models.Battle
 
 @{
     ViewBag.Title = "TaskDescription";
@@ -9,13 +9,13 @@
 <table>
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.TaskTitle)
+            @Html.DisplayNameFor(model => model.CurrentTask.Description.TaskTitle)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Level)
+            @Html.DisplayNameFor(model => model.CurrentTask.Description.Level)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.DescriptionText)
+            @Html.DisplayNameFor(model => model.CurrentTask.Description.DescriptionText)
         </th>
         <th></th>
     </tr>
@@ -23,17 +23,17 @@
     
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => modelItem.TaskTitle)
+                @Html.DisplayFor(model => model.CurrentTask.Description.TaskTitle)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => modelItem.Level)
+                @Html.DisplayFor(model => model.CurrentTask.Description.Level)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => modelItem.DescriptionText)
+                @Html.DisplayFor(model => model.CurrentTask.Description.DescriptionText)
             </td>
         </tr>
         
 
 </table>
 
-@Html.ActionLink("Start Coding","Code","Battle")
+@Html.ActionLink("Start Coding", "Code", "Battle", new { BattleId = Model.BattleId } , "")

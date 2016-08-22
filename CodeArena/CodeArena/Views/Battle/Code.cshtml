@@ -1,6 +1,7 @@
-﻿<h2>@ViewBag.TaskTitle</h2>
+﻿@model CodeArena.Models.Battle
+<h2>@ViewBag.TaskTitle</h2>
 <pre>
-   @foreach(var line in ViewBag.TaskCode)
+  @foreach(var line in ViewBag.TaskCode)
    {
        @line<br />
    }

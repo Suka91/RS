@@ -8,6 +8,7 @@ using System.Web.Mvc;
 using CodeArena.Models;
 using System.Diagnostics;
 using System.Reflection;
+using CodeArena.ViewModels;
 
 namespace CodeArena.Controllers
 {
@@ -16,40 +17,6 @@ namespace CodeArena.Controllers
     {
         private BattleDBContext db = new BattleDBContext();
 
-        private static BattleManager battleManager =  new BattleManager();
-
-        private class BattleManager 
-        {
-            public List<int> taskIds { get; set; }
-            public int tasksTaken { get; set; }
-            public int currentTask { get; set; }
-
-            public int currentLevel { get; set; }
-
-            public Stopwatch sw;
-
-            public BattleManager() { }
-
-            public void  InitBattleManager(int Level, BattleDBContext dbContext) 
-            {
-                taskIds = dbContext.Tasks.Where(row => row.Description.Level == Level).Select(a => a.TaskId).ToList();
-                currentLevel = Level;
-                tasksTaken = 0;
-                sw = new Stopwatch();
-                sw.Start();
-            }
-            /* Choose random task from taskIds list, also removes it from list and increment tasks taken. */
-            public void chooseCurrentTask()
-            {
-                Random rnd = new Random();
-                int taskIdindex = rnd.Next(0, taskIds.Count);
-
-                currentTask = taskIds[taskIdindex];
-                taskIds.RemoveAt(taskIdindex);
-
-                tasksTaken++;
-            }
-        }
         //
         // GET: /Battle/
 
@@ -158,30 +125,29 @@ namespace CodeArena.Controllers
             return View();
         }
         //post
-        [HttpPost, ActionName("TaskDescription")]
+        [HttpPost, ActionName("StartBattle")]
         //[ValidateAntiForgeryToken]
-        public ActionResult TaskDescription(int Level)
+        public ActionResult StartBattle(int Level)
         {
-            battleManager.InitBattleManager(Level,db);
-            battleManager.chooseCurrentTask();
-            return View(db.Tasks.Single(row => row.TaskId == battleManager.currentTask).Description);
+            int BattleId = BattleManagerViewModel.StartBattle(Level,db);
+            BattleManagerViewModel.chooseCurrentTask(BattleId,db);
+            Battle battle = BattleManagerViewModel.getBattleById(BattleId,db);
+            return View("TaskDescription",battle);
         }
         //get
-        public ActionResult TaskDescription()
+        public ActionResult TaskDescription(int BattleId)
         {
-            battleManager.chooseCurrentTask();
-            Console.WriteLine("{0} max level\n{1} current Task id\n", battleManager.currentLevel, battleManager.currentTask);
-            return View(db.Tasks.Single(row => row.TaskId == battleManager.currentTask).Description);
+            BattleManagerViewModel.chooseCurrentTask(BattleId, db);
+            Battle battle = BattleManagerViewModel.getBattleById(BattleId, db);
+            return View(battle);
         }
-
-        public ActionResult Code()
+        //get
+        public ActionResult Code(int BattleId)
         {
-
-            //db.Tasks.Single(row => row.TaskId == battleManager.currentTask).UnsolvedTaskPath
-            string[] taskCode = System.IO.File.ReadAllLines(Server.MapPath("~/Resources/Binary_Search/version1/Binary_Search.py"));
+            Battle battle = BattleManagerViewModel.getBattleById(BattleId, db);
+            string[] taskCode = System.IO.File.ReadAllLines(Server.MapPath(battle.CurrentTask.UnsolvedTaskPath));
             ViewBag.TaskCode = taskCode;
-            ViewBag.TaskTitle = db.Tasks.Single(row => row.TaskId == battleManager.currentTask).Description.TaskTitle;
-            return View();
+            return View(battle);
         }
 
         protected override void Dispose(bool disposing)

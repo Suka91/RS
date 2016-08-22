@@ -20,5 +20,6 @@ namespace CodeArena.Models
         public DbSet<Task> Tasks { get; set; }
         public DbSet<TaskDescription> Descriptions { get; set; }
         public DbSet<Record> Records { get; set; }
+        public DbSet<Battle> Battles { get; set; }
     }
 }

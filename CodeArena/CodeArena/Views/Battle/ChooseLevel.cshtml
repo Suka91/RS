@@ -1,7 +1,7 @@
 ﻿@model CodeArena.Models.TaskDescription
 <h2>Choose Level</h2>
 <div id="Menu">
-@using (Html.BeginForm("TaskDescription", "Battle"))
+@using (Html.BeginForm("StartBattle", "Battle"))
 {
     for (int i = 1; i <= @ViewBag.maxLevel; i++)
     {
