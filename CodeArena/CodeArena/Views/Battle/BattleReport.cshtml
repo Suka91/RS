@@ -1,0 +1,27 @@
+﻿@model CodeArena.Models.Battle
+@{
+    ViewBag.Title = "BattleReport";
+}
+<h2>BattleReport</h2>
+@if (ViewBag.TaskError != null)
+{    
+    <h2>Fail!</h2>
+    <h3>Error report:</h3>
+    @Html.TextArea("ErrorReports", (string)ViewBag.TaskError, new { cols = "600", rows = "15", @readonly = true});
+   
+    using (Html.BeginForm("ReturnToCode", "Battle"))
+    {
+        @Html.Hidden("BattleId", @Model.BattleId);
+        <br/>
+        <input type="submit" value="Return to code" />
+    }
+}
+else
+{
+    <h3>Correct!</h3>
+    using (@Html.BeginForm("TaskDescription", "Battle"))
+    {
+        @Html.Hidden("BattleId", @Model.BattleId);
+        <input type="submit" value="Proceed"/>
+    }
+}

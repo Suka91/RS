@@ -11,6 +11,6 @@ namespace CodeArena.Models
         public virtual int Score { get; set; }
         public virtual TimeSpan Time { get; set; }
         public virtual int NoCorrectAnswers { get; set; }
-        public virtual UserProfile User { get; set; }
+        public virtual string User { get; set; }
     }
 }

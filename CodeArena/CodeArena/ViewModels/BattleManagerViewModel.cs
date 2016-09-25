@@ -10,7 +10,7 @@ namespace CodeArena.ViewModels
     public class BattleManagerViewModel
     {
 
-        public static int StartBattle(int Level, BattleDBContext dbContext) 
+        public static int StartBattle(string currentUser, int Level, BattleDBContext dbContext) 
         {
             int BattleId;
             if(dbContext.Battles.Any())
@@ -29,7 +29,7 @@ namespace CodeArena.ViewModels
                 tempList.RemoveAt(index);
                 i++;
             }
-            Battle newBattle = new Battle { BattleId = BattleId, currentLevel = Level, StartTime = DateTime.Now.TimeOfDay.TotalSeconds, TasksTakenCount = 0, TakenTasks = shuffledList };
+            Battle newBattle = new Battle { User = currentUser, BattleId = BattleId, CurrentLevel = Level, StartTime = DateTime.Now.TimeOfDay.TotalSeconds, TasksTakenCount = 0, TakenTasks = shuffledList, TasksCorrectCount  = 0};
             dbContext.Battles.Add(newBattle);
             dbContext.SaveChanges();
             return BattleId;
@@ -45,10 +45,30 @@ namespace CodeArena.ViewModels
             dbContext.Battles.Single(b => b.BattleId == BattleId).TasksTakenCount ++;
             dbContext.SaveChanges();
         }
+        public static bool isBattleFinished(int BattleId, BattleDBContext dbContext)
+        {
+            List<Task> taskList = dbContext.Battles.Single(b => b.BattleId == BattleId).TakenTasks;
+            if (taskList.Any())
+                return false;
+            else
+            {
+                double endTime = DateTime.Now.TimeOfDay.TotalSeconds;
+
+                dbContext.Battles.Single(b => b.BattleId == BattleId).EndTime = endTime;
+                dbContext.SaveChanges();
+                
+                return true;
+            }
+        }
         public static Battle getBattleById(int BattleId, BattleDBContext dbContext)
         {
             Battle battle = dbContext.Battles.Single(b => b.BattleId == BattleId);
             return battle;
+        }
+        public static void incrementCorrectTasks(int BattleId, BattleDBContext dbContext)
+        {
+            dbContext.Battles.Single(b => b.BattleId == BattleId).TasksCorrectCount++;
+            dbContext.SaveChanges();
         }
     }
 }

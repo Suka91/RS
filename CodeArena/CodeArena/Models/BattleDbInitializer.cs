@@ -376,22 +376,22 @@ namespace CodeArena.Models
                     Level = 3,
                     DescriptionText = "Opis prvog zadatka."
                 },
-                /*Remove_Puntuations*/
+                /*Remove_Punctuations*/
                 new TaskDescription 
                 {
-                    TaskTitle = "Remove Puntuations",
+                    TaskTitle = "Remove Punctuations",
                     Level = 1,
                     DescriptionText = "Opis prvog zadatka."
                 },
                 new TaskDescription 
                 {
-                    TaskTitle = "Remove Puntuations",
+                    TaskTitle = "Remove Punctuations",
                     Level = 2,
                     DescriptionText = "Opis prvog zadatka."
                 },
                 new TaskDescription 
                 {
-                    TaskTitle = "Remove Puntuations",
+                    TaskTitle = "Remove Punctuations",
                     Level = 3,
                     DescriptionText = "Opis prvog zadatka."
                 },
@@ -502,7 +502,7 @@ namespace CodeArena.Models
                 new Task
                 {
                     UnsolvedTaskPath = "~/Resources/Even_Numbers/version1/Even_Numbers.py",
-                    SolvedTaskPath = "~/Resources/Even_Numbersn/version1/Even_Numbers_Solved.py",
+                    SolvedTaskPath = "~/Resources/Even_Numbers/version1/Even_Numbers_Solved.py",
                     WraperTaskPath = "~/Resources/Even_Numbers/version1/Even_Numbers_Wrapper.py",
                     IOTestTaskPath = "~/Resources/Even_Numbers/version1/Even_Numbers_IO.py",
                     Description = descriptions.Single(d => d.TaskTitle == "Even Numbers" &&  d.Level == 3)
@@ -510,7 +510,7 @@ namespace CodeArena.Models
                  new Task
                 {
                     UnsolvedTaskPath = "~/Resources/Even_Numbers/version2/Even_Numbers.py",
-                    SolvedTaskPath = "~/Resources/Even_Numbersn/version2/Even_Numbers_Solved.py",
+                    SolvedTaskPath = "~/Resources/Even_Numbers/version2/Even_Numbers_Solved.py",
                     WraperTaskPath = "~/Resources/Even_Numbers/version2/Even_Numbers_Wrapper.py",
                     IOTestTaskPath = "~/Resources/Even_Numbers/version2/Even_Numbers_IO.py",
                     Description = descriptions.Single(d => d.TaskTitle == "Even Numbers" &&  d.Level == 2)
@@ -518,7 +518,7 @@ namespace CodeArena.Models
                  new Task
                 {
                     UnsolvedTaskPath = "~/Resources/Even_Numbers/version3/Even_Numbers.py",
-                    SolvedTaskPath = "~/Resources/Even_Numbersn/version3/Even_Numbers_Solved.py",
+                    SolvedTaskPath = "~/Resources/Even_Numbers/version3/Even_Numbers_Solved.py",
                     WraperTaskPath = "~/Resources/Even_Numbers/version3/Even_Numbers_Wrapper.py",
                     IOTestTaskPath = "~/Resources/Even_Numbers/version3/Even_Numbers_IO.py",
                     Description = descriptions.Single(d => d.TaskTitle == "Even Numbers" &&  d.Level == 1)
@@ -526,7 +526,7 @@ namespace CodeArena.Models
                  new Task
                 {
                     UnsolvedTaskPath = "~/Resources/Even_Numbers/version4/Even_Numbers.py",
-                    SolvedTaskPath = "~/Resources/Even_Numbersn/version4/Even_Numbers_Solved.py",
+                    SolvedTaskPath = "~/Resources/Even_Numbers/version4/Even_Numbers_Solved.py",
                     WraperTaskPath = "~/Resources/Even_Numbers/version4/Even_Numbers_Wrapper.py",
                     IOTestTaskPath = "~/Resources/Even_Numbers/version4/Even_Numbers_IO.py",
                     Description = descriptions.Single(d => d.TaskTitle == "Even Numbers" &&  d.Level == 1)
@@ -864,30 +864,30 @@ namespace CodeArena.Models
                     IOTestTaskPath = "~/Resources/Remove_Duplicates/version3/Remove_Duplicates_IO.py",
                     Description = descriptions.Single(d => d.TaskTitle == "Remove Duplicates" &&  d.Level == 3)
                 },
-                /*Remove_Puntuations*/
+                /*Remove_Punctuations*/
                 new Task
                 {
-                    UnsolvedTaskPath = "~/Resources/Remove_Puntuations/version1/Remove_Puntuations.py",
-                    SolvedTaskPath = "~/Resources/Remove_Puntuations/version1/Remove_Puntuations_Solved.py",
-                    WraperTaskPath = "~/Resources/Remove_Puntuations/version1/Remove_Puntuations_Wrapper.py",
-                    IOTestTaskPath = "~/Resources/Remove_Puntuations/version1/Remove_Puntuations_IO.py",
-                    Description = descriptions.Single(d => d.TaskTitle == "Remove Puntuations" &&  d.Level == 1)
+                    UnsolvedTaskPath = "~/Resources/Remove_Punctuations/version1/Remove_Punctuations.py",
+                    SolvedTaskPath = "~/Resources/Remove_Punctuations/version1/Remove_Punctuations_Solved.py",
+                    WraperTaskPath = "~/Resources/Remove_Punctuations/version1/Remove_Punctuations_Wrapper.py",
+                    IOTestTaskPath = "~/Resources/Remove_Punctuations/version1/Remove_Punctuations_IO.py",
+                    Description = descriptions.Single(d => d.TaskTitle == "Remove Punctuations" &&  d.Level == 1)
                 },
                 new Task
                 {
-                    UnsolvedTaskPath = "~/Resources/Remove_Puntuations/version2/Remove_Puntuations.py",
-                    SolvedTaskPath = "~/Resources/Remove_Puntuations/version2/Remove_Puntuations_Solved.py",
-                    WraperTaskPath = "~/Resources/Remove_Puntuations/version2/Remove_Puntuations_Wrapper.py",
-                    IOTestTaskPath = "~/Resources/Remove_Puntuations/version2/Remove_Puntuations_IO.py",
-                    Description = descriptions.Single(d => d.TaskTitle == "Remove Puntuations" &&  d.Level == 2)
+                    UnsolvedTaskPath = "~/Resources/Remove_Punctuations/version2/Remove_Punctuations.py",
+                    SolvedTaskPath = "~/Resources/Remove_Punctuations/version2/Remove_Punctuations_Solved.py",
+                    WraperTaskPath = "~/Resources/Remove_Punctuations/version2/Remove_Punctuations_Wrapper.py",
+                    IOTestTaskPath = "~/Resources/Remove_Punctuations/version2/Remove_Punctuations_IO.py",
+                    Description = descriptions.Single(d => d.TaskTitle == "Remove Punctuations" &&  d.Level == 2)
                 },
                 new Task
                 {
-                    UnsolvedTaskPath = "~/Resources/Remove_Puntuations/version3/Remove_Puntuations.py",
-                    SolvedTaskPath = "~/Resources/Remove_Puntuations/version3/Remove_Puntuations_Solved.py",
-                    WraperTaskPath = "~/Resources/Remove_Puntuations/version3/Remove_Puntuations_Wrapper.py",
-                    IOTestTaskPath = "~/Resources/Remove_Puntuations/version3/Remove_Puntuations_IO.py",
-                    Description = descriptions.Single(d => d.TaskTitle == "Remove Puntuations" &&  d.Level == 3)
+                    UnsolvedTaskPath = "~/Resources/Remove_Punctuations/version3/Remove_Punctuations.py",
+                    SolvedTaskPath = "~/Resources/Remove_Punctuations/version3/Remove_Punctuations_Solved.py",
+                    WraperTaskPath = "~/Resources/Remove_Punctuations/version3/Remove_Punctuations_Wrapper.py",
+                    IOTestTaskPath = "~/Resources/Remove_Punctuations/version3/Remove_Punctuations_IO.py",
+                    Description = descriptions.Single(d => d.TaskTitle == "Remove Punctuations" &&  d.Level == 3)
                 },
                 /*Tuples*/
                 new Task
@@ -900,10 +900,10 @@ namespace CodeArena.Models
                 },
                 new Task
                 {
-                    UnsolvedTaskPath = "~/Resources/Tuples/version2/Remove_Puntuations.py",
-                    SolvedTaskPath = "~/Resources/Tuples/version2/Remove_Puntuations_Solved.py",
-                    WraperTaskPath = "~/Resources/Tuples/version2/Remove_Puntuations_Wrapper.py",
-                    IOTestTaskPath = "~/Resources/Tuples/version2/Remove_Puntuations_IO.py",
+                    UnsolvedTaskPath = "~/Resources/Tuples/version2/Tuples.py",
+                    SolvedTaskPath = "~/Resources/Tuples/version2/Tuples_Solved.py",
+                    WraperTaskPath = "~/Resources/Tuples/version2/Tuples_Wrapper.py",
+                    IOTestTaskPath = "~/Resources/Tuples/version2/Tuples_IO.py",
                     Description = descriptions.Single(d => d.TaskTitle == "Tuples" &&  d.Level == 2)
                 },
                 new Task
