@@ -5,7 +5,14 @@
 {
     for (int i = 1; i <= @ViewBag.maxLevel; i++)
     {
-        @Html.RadioButton("Level", i)
+        if(@i == 1)
+        {
+            @Html.RadioButton("Level", i, new { @checked = true })
+        }
+        else
+        {
+            @Html.RadioButton("Level", i)
+        }  
     }
     <input type="submit" value="Begin Battle" />
 }

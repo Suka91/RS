@@ -51,14 +51,14 @@ namespace CodeArena.ViewModels
             if (taskList.Any())
                 return false;
             else
-            {
-                double endTime = DateTime.Now.TimeOfDay.TotalSeconds;
-
-                dbContext.Battles.Single(b => b.BattleId == BattleId).EndTime = endTime;
-                dbContext.SaveChanges();
-                
                 return true;
-            }
+        }
+        public static void finishBattle(int BattleId, BattleDBContext dbContext)
+        {
+            double endTime = DateTime.Now.TimeOfDay.TotalSeconds;
+
+            dbContext.Battles.Single(b => b.BattleId == BattleId).EndTime = endTime;
+            dbContext.SaveChanges();
         }
         public static Battle getBattleById(int BattleId, BattleDBContext dbContext)
         {

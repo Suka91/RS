@@ -1,0 +1,14 @@
+﻿
+@{
+    ViewBag.Title = "Records";
+}
+
+<table>
+    <tr> <th>All time best</th></tr>
+
+    @for (int i = 1; i <= ViewBag.topRecords.Count; i++)
+    {
+        <tr> <td>@i.</td> <td>@ViewBag.topRecords[i - 1].User</td> <td>@ViewBag.topRecords[i - 1].Score</td></tr>
+    }
+</table>
+

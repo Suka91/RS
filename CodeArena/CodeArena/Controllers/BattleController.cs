@@ -156,6 +156,36 @@ namespace CodeArena.Controllers
             }
             return View("Index");
         }
+        [HttpParamActionAttribute]
+        [AcceptVerbs(HttpVerbs.Post)]
+        public ActionResult Retreat(int BattleId)
+        {
+            BattleManagerViewModel.finishBattle(BattleId, db);
+            Battle battle = BattleManagerViewModel.getBattleById(BattleId, db);
+            Record newRecord = new Record
+            {
+                Score = (int)(Math.Pow((10000 / (battle.EndTime - battle.StartTime)) * battle.CurrentLevel, battle.TasksCorrectCount) - 1),
+                Time = TimeSpan.FromSeconds(battle.EndTime - battle.StartTime),
+                NoCorrectAnswers = battle.TasksCorrectCount,
+                User = battle.User
+            };
+
+            db.Records.Add(newRecord);
+            db.SaveChanges();
+
+            if (db.Records.Count() < 5)
+            {
+                List<Record> topRecords = db.Records.Where(r => r.User == battle.User).OrderByDescending(r => r.Score).ToList();
+                ViewBag.topRecords = topRecords;
+            }
+            else
+            {
+                List<Record> topRecords = db.Records.Where(r => r.User == battle.User).OrderByDescending(r => r.Score).Take(5).ToList();
+                ViewBag.topRecords = topRecords;
+            }
+
+            return View("Score", newRecord);
+        }
 
         [HttpParamActionAttribute]
         [AcceptVerbs(HttpVerbs.Post)]
@@ -163,14 +193,28 @@ namespace CodeArena.Controllers
         {
             if (BattleManagerViewModel.isBattleFinished(BattleId,db))
             {
-                BattleManagerViewModel.getBattleById(BattleId,db);
+                BattleManagerViewModel.finishBattle(BattleId, db);
                 Battle battle = BattleManagerViewModel.getBattleById(BattleId,db);
-                Record newRecord = new Record { Score = (int)Math.Pow((10000/(battle.EndTime - battle.StartTime))*battle.TasksCorrectCount,battle.CurrentLevel),
+                Record newRecord = new Record
+                {
+                    Score = (int)Math.Pow((10000 / (battle.EndTime - battle.StartTime)) * battle.CurrentLevel, battle.TasksCorrectCount)-1,
                                                 Time = TimeSpan.FromSeconds(battle.EndTime - battle.StartTime), 
                                                 NoCorrectAnswers = battle.TasksCorrectCount,
                                                 User = battle.User };
                 db.Records.Add(newRecord);
                 db.SaveChanges();
+
+                if (db.Records.Count() < 5)
+                {
+                    List<Record> topRecords = db.Records.Where(r => r.User == battle.User).ToList();
+                    ViewBag.topRecords = topRecords;
+                }
+                else
+                {
+                    List<Record> topRecords = db.Records.Where(r => r.User == battle.User).OrderByDescending(r => r.Score).Take(5).ToList();
+                    ViewBag.topRecords = topRecords;
+                }
+
                 return View("Score", newRecord);
             }
             else
@@ -196,6 +240,7 @@ namespace CodeArena.Controllers
             Battle battle = BattleManagerViewModel.getBattleById(BattleId, db);
             string taskCode = System.IO.File.ReadAllText(Server.MapPath(battle.CurrentTask.UnsolvedTaskPath));
             ViewBag.TaskCode = taskCode;
+            ViewBag.TaskDescription =  battle.CurrentTask.Description.DescriptionText.ToString();
             return View(battle);
         }
 
@@ -206,6 +251,7 @@ namespace CodeArena.Controllers
             Battle battle = BattleManagerViewModel.getBattleById(BattleId, db);
             string taskCode = System.IO.File.ReadAllText(Server.MapPath(battle.CurrentTask.SolvedTaskPath));
             ViewBag.TaskCode = taskCode;
+            ViewBag.TaskDescription = battle.CurrentTask.Description.DescriptionText.ToString();
             return View("Code", battle);
         }
         /*[HttpPost, ActionName("BattleReport")]
@@ -244,6 +290,12 @@ namespace CodeArena.Controllers
             }
             python.Close();
             return View("BattleReport", battle);
+        }
+        public ActionResult Records()
+        {
+            List<Record> topRecords = db.Records.OrderByDescending(r => r.Score).ToList();
+            ViewBag.topRecords = topRecords;
+            return View();
         }
         protected override void Dispose(bool disposing)
         {

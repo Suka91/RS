@@ -5,10 +5,11 @@
         @Html.Hidden("BattleId", @Model.BattleId);
     <pre>
         @Html.TextArea("TaskCode", (string)ViewBag.TaskCode, new {cols = "81", rows = "30"})
+        @Html.TextArea("TaskDescription", (string)ViewBag.TaskDescription, new {cols = "50", rows = "30" , @readonly = true })
     </pre>
         <br />
         <input type="submit" value="Submit" name="BattleReport" />
         <input type="submit" value="Skip Task" name="TaskDescription" />
-        <input type="submit" value="Retreat" name="action:Retreat" />
+        <input type="submit" value="Retreat" name="Retreat" />
     }
 

@@ -11,15 +11,6 @@ namespace CodeArena.Models
     {
         protected override void Seed(BattleDBContext context)
         {
-            var records = new List<Record>
-            {
-                new Record 
-                { 
-                    Score = 11000,
-                    Time = new TimeSpan(0,5,0),
-                    NoCorrectAnswers = 5
-                }
-            };
             var descriptions = new List<TaskDescription>
             {   
                 
@@ -915,8 +906,6 @@ namespace CodeArena.Models
                     Description = descriptions.Single(d => d.TaskTitle == "Tuples" &&  d.Level == 3)
                 }
             }.ForEach(a => context.Tasks.Add(a));
-            records.ForEach(a => context.Records.Add(a));
-            //descriptions.ForEach(a => context.Descriptions.Add(a));
             
         }
     }
