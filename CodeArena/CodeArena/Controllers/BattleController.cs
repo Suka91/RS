@@ -18,7 +18,7 @@ namespace CodeArena.Controllers
 
     public class BattleController : Controller
     {
-        public class HttpParamActionAttribute : ActionNameSelectorAttribute
+       /* public class HttpParamActionAttribute : ActionNameSelectorAttribute
         {
             public override bool IsValidName(ControllerContext controllerContext, string actionName, MethodInfo methodInfo)
             {
@@ -32,7 +32,7 @@ namespace CodeArena.Controllers
                 return request[methodInfo.Name] != null;
             }
         }
-
+        */
         private BattleDBContext db = new BattleDBContext();
         private UsersContext udb = new UsersContext();
         // GET: /Battle/
@@ -156,8 +156,9 @@ namespace CodeArena.Controllers
             }
             return View("Index");
         }
-        [HttpParamActionAttribute]
-        [AcceptVerbs(HttpVerbs.Post)]
+
+       // [HttpParamActionAttribute]
+        //[AcceptVerbs(HttpVerbs.Post)]
         public ActionResult Retreat(int BattleId)
         {
             BattleManagerViewModel.finishBattle(BattleId, db);
@@ -187,8 +188,8 @@ namespace CodeArena.Controllers
             return View("Score", newRecord);
         }
 
-        [HttpParamActionAttribute]
-        [AcceptVerbs(HttpVerbs.Post)]
+       // [HttpParamActionAttribute]
+       // [AcceptVerbs(HttpVerbs.Post)]
         public ActionResult TaskDescription(int BattleId)
         {
             if (BattleManagerViewModel.isBattleFinished(BattleId,db))
@@ -225,14 +226,14 @@ namespace CodeArena.Controllers
             }
         }
 
-        [HttpParamActionAttribute]
-        [AcceptVerbs(HttpVerbs.Post)]
-        public ActionResult Score(int BattleId)
+       // [HttpParamActionAttribute]
+     //   [AcceptVerbs(HttpVerbs.Post)]
+    /*    public ActionResult Score(int BattleId)
         {
             BattleManagerViewModel.getBattleById(BattleId, db);
             Battle battle = BattleManagerViewModel.getBattleById(BattleId, db);
             return View("Score", battle);
-        }
+        }*/
 
         //get
         public ActionResult Code(int BattleId)
@@ -256,7 +257,7 @@ namespace CodeArena.Controllers
         }
         /*[HttpPost, ActionName("BattleReport")]
         [HttpParamActionAttribute]*/
-        [HttpParamActionAttribute]
+      //  [HttpParamActionAttribute]
         [AcceptVerbs(HttpVerbs.Post)]
         public ActionResult BattleReport(int BattleId, String TaskCode)
         {
