@@ -1,6 +1,5 @@
 def prime_numbers(low_range, up_range):
-    """ Function takes all prime numbers
-in interval between low_range and up_range"""
+
     prime_numbers = []
     for num in range(low_range,up_range + 1):
         if num == 1:

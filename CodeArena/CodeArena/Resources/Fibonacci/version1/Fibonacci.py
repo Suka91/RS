@@ -1,3 +1,3 @@
 def recur_fibo(n):
-   """Write a function which return n-th Fibonacci`s number"""
+   
    ...

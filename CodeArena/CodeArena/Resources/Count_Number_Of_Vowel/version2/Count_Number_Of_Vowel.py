@@ -4,7 +4,7 @@ def count_number_of_vowel(text_str):
 
     ip_str = text_str.casefold()
 
-    # make a dictionary with each vowel a key and value 0
+    
     ...
     
     for char in count:

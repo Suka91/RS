@@ -1,5 +1,5 @@
 def remove_punctuations(my_str):
-    # define punctuation
+
     punctuations = '''!()-[]{};:'"\,<>./?@#$%^&*_~'''
 
     no_punct = ""

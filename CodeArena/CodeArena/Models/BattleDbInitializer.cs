@@ -19,19 +19,19 @@ namespace CodeArena.Models
                 {
                     TaskTitle = "Binary Search",
                     Level = 1,
-                    DescriptionText = "Opis prvog zadatka."
+                    DescriptionText = string.Format("Please write a binary search function which searches an item in a sorted list.{0}The function should return the index of element to be searched in the list.", Environment.NewLine)
                 },
                 new TaskDescription 
                 {
                     TaskTitle = "Binary Search",
                     Level = 2,
-                    DescriptionText = "Opis prvog zadatka."
+                    DescriptionText = string.Format("Please write a binary search function which searches an item in a sorted list.{0}The function should return the index of element to be searched in the list.", Environment.NewLine)
                 }  ,
                 new TaskDescription 
                 {
                     TaskTitle = "Binary Search",
                     Level = 3,
-                    DescriptionText = "Opis prvog zadatka."
+                    DescriptionText = string.Format("Please write a binary search function which searches an item in a sorted list.{0}The function should return the index of element to be searched in the list.", Environment.NewLine)
                 }  ,
 
                 /* Count_Number_Of_Vowel */
@@ -39,19 +39,19 @@ namespace CodeArena.Models
                 {
                     TaskTitle = "Count Number Of Vowel",
                     Level = 1,
-                    DescriptionText = "Opis prvog zadatka."
+                    DescriptionText = string.Format("Write function which  count the number of each vowel in a string and return dictionary{0}of counted vowel.",Environment.NewLine)
                 },
                 new TaskDescription 
                 {
                     TaskTitle = "Count Number Of Vowel",
                     Level = 2,
-                    DescriptionText = "Opis prvog zadatka."
+                    DescriptionText = string.Format("Write function which  count the number of each vowel in a string and return dictionary{0}of counted vowel.",Environment.NewLine)
                 },
                 new TaskDescription 
                 {
                     TaskTitle = "Count Number Of Vowel",
                     Level = 3,
-                    DescriptionText = "Opis prvog zadatka."
+                   DescriptionText = string.Format("Write function which  count the number of each vowel in a string and return dictionary{0}of counted vowel.",Environment.NewLine)
                 },
 
                 /* Dec_To_Bin*/
@@ -59,19 +59,19 @@ namespace CodeArena.Models
                 {
                     TaskTitle = "Decimal To Binary",
                     Level = 1,
-                    DescriptionText = "Opis prvog zadatka."
+                    DescriptionText = string.Format("Write function that print binary number for the input decimal using recursion",Environment.NewLine)
                 },
                 new TaskDescription 
                 {
                     TaskTitle = "Decimal To Binary",
                     Level = 2,
-                    DescriptionText = "Opis prvog zadatka."
+                    DescriptionText = string.Format("Write function that print binary number for the input decimal using recursion",Environment.NewLine)
                 },
                  new TaskDescription 
                 {
                     TaskTitle = "Decimal To Binary",
                     Level = 3,
-                    DescriptionText = "Opis prvog zadatka."
+                    DescriptionText = string.Format("Write function that print binary number for the input decimal using recursion",Environment.NewLine)
                 },
 
                 /*Even_Numbers*/
@@ -79,19 +79,19 @@ namespace CodeArena.Models
                 {
                     TaskTitle = "Even Numbers",
                     Level = 1,
-                    DescriptionText = "Opis prvog zadatka."
+                    DescriptionText = string.Format("Implement function which exclude all numbers from the list that are not even and{0}return new list of even numbers",Environment.NewLine)
                 },
                 new TaskDescription 
                 {
                     TaskTitle = "Even Numbers",
                     Level = 2,
-                    DescriptionText = "Opis prvog zadatka."
+                    DescriptionText =  string.Format("Implement function which exclude all numbers from the list that are not even and{0}return new list of even numbers",Environment.NewLine)
                 },
                 new TaskDescription 
                 {
                     TaskTitle = "Even Numbers",
                     Level = 3,
-                    DescriptionText = "Opis prvog zadatka."
+                    DescriptionText =  string.Format("Implement function which exclude all numbers from the list that are not even and{0}return new list of even numbers",Environment.NewLine)
                 },
 
                 /*Factorial*/
@@ -99,19 +99,19 @@ namespace CodeArena.Models
                 {
                     TaskTitle = "Factorial",
                     Level = 1,
-                    DescriptionText = "Opis prvog zadatka."
+                    DescriptionText = string.Format("Implement a recursive function that find the factorial of an integer",Environment.NewLine)
                 },
                 new TaskDescription 
                 {
                     TaskTitle = "Factorial",
                     Level = 2,
-                    DescriptionText = "Opis prvog zadatka."
+                    DescriptionText = string.Format("Implement a recursive function that find the factorial of an integer",Environment.NewLine)
                 },
                 new TaskDescription 
                 {
                     TaskTitle = "Factorial",
                     Level = 3,
-                    DescriptionText = "Opis prvog zadatka."
+                    DescriptionText = string.Format("Implement a recursive function that find the factorial of an integer",Environment.NewLine)
                 },
 
                 /*Fibonacci*/
@@ -119,19 +119,19 @@ namespace CodeArena.Models
                 {
                     TaskTitle = "Fibonacci",
                     Level = 1,
-                    DescriptionText = "Opis prvog zadatka."
+                    DescriptionText =  string.Format("Define recursive fibonacci function that find n-th fibonacci number",Environment.NewLine)
                 },
                 new TaskDescription 
                 {
                     TaskTitle = "Fibonacci",
                     Level = 2,
-                    DescriptionText = "Opis prvog zadatka."
+                    DescriptionText =  string.Format("Define recursive fibonacci function that find n-th fibonacci number",Environment.NewLine)
                 },
                 new TaskDescription 
                 {
                     TaskTitle = "Fibonacci",
                     Level = 3,
-                    DescriptionText = "Opis prvog zadatka."
+                    DescriptionText =  string.Format("Define recursive fibonacci function that find n-th fibonacci number",Environment.NewLine)
                 },
 
                 /*HCF*/
@@ -139,19 +139,19 @@ namespace CodeArena.Models
                 {
                     TaskTitle = "HCF",
                     Level = 1,
-                    DescriptionText = "Opis prvog zadatka."
+                    DescriptionText = string.Format("Define function that takes two integers and calculate highest common factor",Environment.NewLine)
                 },
                 new TaskDescription 
                 {
                     TaskTitle = "HCF",
                     Level = 2,
-                    DescriptionText = "Opis prvog zadatka."
+                    DescriptionText = string.Format("Define function that takes two integers and calculate highest common factor",Environment.NewLine)
                 },
                 new TaskDescription 
                 {
                     TaskTitle = "HCF",
                     Level = 3,
-                    DescriptionText = "Opis prvog zadatka."
+                    DescriptionText = string.Format("Define function that takes two integers and calculate highest common factor",Environment.NewLine)
                 },
 
                 /*LCM*/
@@ -159,19 +159,19 @@ namespace CodeArena.Models
                 {
                     TaskTitle = "LCM",
                     Level = 1,
-                    DescriptionText = "Opis prvog zadatka."
+                    DescriptionText = string.Format("Define function that takes two integers and calculate least common multiple",Environment.NewLine)
                 },
                 new TaskDescription 
                 {
                     TaskTitle = "LCM",
                     Level = 2,
-                    DescriptionText = "Opis prvog zadatka."
+                   DescriptionText = string.Format("Define function that takes two integers and calculate least common multiple",Environment.NewLine)
                 },
                 new TaskDescription 
                 {
                     TaskTitle = "LCM",
                     Level = 3,
-                    DescriptionText = "Opis prvog zadatka."
+                    DescriptionText = string.Format("Define function that takes two integers and calculate least common multiple",Environment.NewLine)
                 },
                 
                 /*Leap_Year*/
@@ -179,19 +179,19 @@ namespace CodeArena.Models
                 {
                     TaskTitle = "Leap Year",
                     Level = 1,
-                    DescriptionText = "Opis prvog zadatka."
+                    DescriptionText =  string.Format("Implement function that examines is the year leap",Environment.NewLine)
                 },
                 new TaskDescription 
                 {
                     TaskTitle = "Leap Year",
                     Level = 2,
-                    DescriptionText = "Opis prvog zadatka."
+                    DescriptionText =  string.Format("Implement function that examines is the year leap",Environment.NewLine)
                 },
                 new TaskDescription 
                 {
                     TaskTitle = "Leap Year",
                     Level = 3,
-                    DescriptionText = "Opis prvog zadatka."
+                    DescriptionText =  string.Format("Implement function that examines is the year leap",Environment.NewLine)
                 },
 
                 /*Math_Formula*/
@@ -199,19 +199,19 @@ namespace CodeArena.Models
                 {
                     TaskTitle = "Math Formula",
                     Level = 1,
-                    DescriptionText = "Opis prvog zadatka."
+                    DescriptionText = string.Format("Write a program that calculates and prints the value according to the given formula:{0}Q = Square root of [(2 * C * D)/H]{0}Following are the fixed values of C and H:{0}C is 50. H is 30.{0}D is the variable whose values should be input to your program in a comma-separated sequence.",Environment.NewLine)
                 },
                 new TaskDescription 
                 {
                     TaskTitle = "Math Formula",
                     Level = 2,
-                    DescriptionText = "Opis prvog zadatka."
+                    DescriptionText =string.Format("Write a program that calculates and prints the value according to the given formula:{0}Q = Square root of [(2 * C * D)/H]{0}Following are the fixed values of C and H:{0}C is 50. H is 30.{0}D is the variable whose values should be input to your program in a comma-separated sequence.",Environment.NewLine)
                 },
                 new TaskDescription 
                 {
                     TaskTitle = "Math Formula",
                     Level = 3,
-                    DescriptionText = "Opis prvog zadatka."
+                    DescriptionText = string.Format("Write a program that calculates and prints the value according to the given formula:{0}Q = Square root of [(2 * C * D)/H]{0}Following are the fixed values of C and H:{0}C is 50. H is 30.{0}D is the variable whose values should be input to your program in a comma-separated sequence.",Environment.NewLine)
                 },
 
                 /*Matrix_Addition*/
@@ -219,19 +219,19 @@ namespace CodeArena.Models
                 {
                     TaskTitle = "Matrix Addition",
                     Level = 1,
-                    DescriptionText = "Opis prvog zadatka."
+                    DescriptionText = "Write a function that take two matrices as arguments and return their additon."
                 },
                 new TaskDescription 
                 {
                     TaskTitle = "Matrix Addition",
                     Level = 2,
-                    DescriptionText = "Opis prvog zadatka."
+                    DescriptionText =  "Write a function that take two matrices as arguments and return their additon."
                 },
                 new TaskDescription 
                 {
                     TaskTitle = "Matrix Addition",
                     Level = 3,
-                    DescriptionText = "Opis prvog zadatka."
+                    DescriptionText =  "Write a function that take two matrices as arguments and return their additon."
                 },
 
                 /*Matrix_Transponse*/
@@ -239,171 +239,171 @@ namespace CodeArena.Models
                 {
                     TaskTitle = "Matrix Transponse",
                     Level = 1,
-                    DescriptionText = "Opis prvog zadatka."
+                    DescriptionText =  "Write a function that take matrix as argument and return transponse matrix."
                 },
                 new TaskDescription 
                 {
                     TaskTitle = "Matrix Transponse",
                     Level = 2,
-                    DescriptionText = "Opis prvog zadatka."
+                    DescriptionText = "Write a function that take matrix as argument and return transponse matrix."
                 },
                 new TaskDescription 
                 {
                     TaskTitle = "Matrix Transponse",
                     Level = 3,
-                    DescriptionText = "Opis prvog zadatka."
+                    DescriptionText = "Write a function that take matrix as argument and return transponse matrix."
                 },
                 /*Palindrome*/
                 new TaskDescription 
                 {
                     TaskTitle = "Palindrome",
                     Level = 1,
-                    DescriptionText = "Opis prvog zadatka."
+                    DescriptionText = "Write function that check if string is palindrome (when reading string from end is the same as reading it from begining)."
                 },
                 new TaskDescription 
                 {
                     TaskTitle = "Palindrome",
                     Level = 2,
-                    DescriptionText = "Opis prvog zadatka."
+                    DescriptionText = "Write function that check if string is palindrome (when reading string from end is the same as reading it from begining)."
                 },
                 new TaskDescription 
                 {
                     TaskTitle = "Palindrome",
                     Level = 3,
-                    DescriptionText = "Opis prvog zadatka."
+                    DescriptionText = "Write function that check if string is palindrome (when reading string from end is the same as reading it from begining)."
                 },
                 /*Pow_Numbers*/
                 new TaskDescription 
                 {
                     TaskTitle = "Power Numbers",
                     Level = 1,
-                    DescriptionText = "Opis prvog zadatka."
+                    DescriptionText = string.Format("Write a function that takes takes list of numbers as first parameter{0}and return list of items that are pow(item,second_param)",Environment.NewLine)
                 },
                 new TaskDescription 
                 {
                     TaskTitle = "Power Numbers",
                     Level = 2,
-                    DescriptionText = "Opis prvog zadatka."
+                    DescriptionText = string.Format("Write a function that takes takes list of numbers as first parameter{0}and return list of items that are pow(item,second_param)",Environment.NewLine)
                 },
                 new TaskDescription 
                 {
                     TaskTitle = "Power Numbers",
                     Level = 3,
-                    DescriptionText = "Opis prvog zadatka."
+                    DescriptionText = string.Format("Write a function that takes takes list of numbers as first parameter{0}and return list of items that are pow(item,second_param)",Environment.NewLine)
                 },
                 /*Prime_Numbers*/
                 new TaskDescription 
                 {
                     TaskTitle = "Prime Numbers",
                     Level = 1,
-                    DescriptionText = "Opis prvog zadatka."
+                    DescriptionText = string.Format("Write a function that takes all prime numbers in interval between low_range and up_range",Environment.NewLine)
                 },
                 new TaskDescription 
                 {
                     TaskTitle = "Prime Numbers",
                     Level = 2,
-                    DescriptionText = "Opis prvog zadatka."
+                    DescriptionText = string.Format("Write a function that takes all prime numbers in interval between low_range and up_range",Environment.NewLine)
                 },
                 new TaskDescription 
                 {
                     TaskTitle = "Prime Numbers",
                     Level = 3,
-                    DescriptionText = "Opis prvog zadatka."
+                    DescriptionText = string.Format("Write a function that takes all prime numbers in interval between low_range and up_range",Environment.NewLine)
                 },
                 /*Print_Factors*/
                 new TaskDescription 
                 {
                     TaskTitle = "Compute Factors",
                     Level = 1,
-                    DescriptionText = "Opis prvog zadatka."
+                    DescriptionText = string.Format("Write a function that takes  a number and prints the factors",Environment.NewLine)
                 },
                 new TaskDescription 
                 {
                     TaskTitle = "Compute Factors",
                     Level = 2,
-                    DescriptionText = "Opis prvog zadatka."
+                    DescriptionText = string.Format("Write a function that takes  a number and prints the factors",Environment.NewLine)
                 },
                 new TaskDescription 
                 {
                     TaskTitle = "Compute Factors",
                     Level = 3,
-                    DescriptionText = "Opis prvog zadatka."
+                    DescriptionText =string.Format("Write a function that takes  a number and prints the factors",Environment.NewLine)
                 },
                 /*Random_Divisible*/
                 new TaskDescription 
                 {
                     TaskTitle = "Random Divisible",
                     Level = 1,
-                    DescriptionText = "Opis prvog zadatka."
+                    DescriptionText = string.Format(" Please write a program to output a random number, which is divisible by 5 and 7, between x and y.",Environment.NewLine)
                 },
                 new TaskDescription 
                 {
                     TaskTitle = "Random Divisible",
                     Level = 2,
-                    DescriptionText = "Opis prvog zadatka."
+                    DescriptionText = string.Format(" Please write a program to output a random number, which is divisible by 5 and 7, between x and y.",Environment.NewLine)
                 },
                 new TaskDescription 
                 {
                     TaskTitle = "Random Divisible",
                     Level = 3,
-                    DescriptionText = "Opis prvog zadatka."
+                    DescriptionText = string.Format(" Please write a program to output a random number, which is divisible by 5 and 7, between x and y.",Environment.NewLine)
                 },
                 /*Remove_Duplicates*/
                 new TaskDescription 
                 {
                     TaskTitle = "Remove Duplicates",
                     Level = 1,
-                    DescriptionText = "Opis prvog zadatka."
+                    DescriptionText = string.Format("Write a program that accepts a sequence of whitespace separated words as input{0}and prints the words after removing all duplicate words and sorting them alphanumerically.",Environment.NewLine)
                 },
                 new TaskDescription 
                 {
                     TaskTitle = "Remove Duplicates",
                     Level = 2,
-                    DescriptionText = "Opis prvog zadatka."
+                    DescriptionText = string.Format("Write a program that accepts a sequence of whitespace separated words as input{0}and prints the words after removing all duplicate words and sorting them alphanumerically.",Environment.NewLine)
                 },
                 new TaskDescription 
                 {
                     TaskTitle = "Remove Duplicates",
                     Level = 3,
-                    DescriptionText = "Opis prvog zadatka."
+                    DescriptionText = string.Format("Write a program that accepts a sequence of whitespace separated words as input{0}and prints the words after removing all duplicate words and sorting them alphanumerically.",Environment.NewLine)
                 },
                 /*Remove_Punctuations*/
                 new TaskDescription 
                 {
                     TaskTitle = "Remove Punctuations",
                     Level = 1,
-                    DescriptionText = "Opis prvog zadatka."
+                    DescriptionText = string.Format("Write a function that remove all punctuations from text.",Environment.NewLine)
                 },
                 new TaskDescription 
                 {
                     TaskTitle = "Remove Punctuations",
                     Level = 2,
-                    DescriptionText = "Opis prvog zadatka."
+                    DescriptionText = string.Format("Write a function that remove all punctuations from text.",Environment.NewLine)
                 },
                 new TaskDescription 
                 {
                     TaskTitle = "Remove Punctuations",
                     Level = 3,
-                    DescriptionText = "Opis prvog zadatka."
+                    DescriptionText = string.Format("Write a function that remove all punctuations from text.",Environment.NewLine)
                 },
                 /*Tuples*/
                 new TaskDescription 
                 {
                     TaskTitle = "Tuples",
                     Level = 1,
-                    DescriptionText = "Opis prvog zadatka."
+                    DescriptionText = string.Format("Write a function which accepts a sequence of comma-separated numbers from console{0}and generate a list and a tuple which contains every number.",Environment.NewLine)
                 },
                 new TaskDescription 
                 {
                     TaskTitle = "Tuples",
                     Level = 2,
-                    DescriptionText = "Opis prvog zadatka."
+                    DescriptionText = string.Format("Write a function which accepts a sequence of comma-separated numbers from console{0}and generate a list and a tuple which contains every number.",Environment.NewLine)
                 },
                 new TaskDescription 
                 {
                     TaskTitle = "Tuples",
                     Level = 3,
-                    DescriptionText = "Opis prvog zadatka."
+                    DescriptionText = string.Format("Write a function which accepts a sequence of comma-separated numbers from console{0}and generate a list and a tuple which contains every number.",Environment.NewLine)
                 }
             };
 
